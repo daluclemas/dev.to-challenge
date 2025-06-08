@@ -16,7 +16,48 @@ html {
   position: relative;
   background-color: #0a0a0a;
   overflow: hidden;
-  padding: 20px;
+  padding: 20px 40px;
+}
+
+.nigerian-flag {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  max-width: 90px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+.nigerian-flag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 135, 81, 0.4) */
+  background-image: url("./shackles.png");
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.nigerian-flag div {
+  width: 100%;
+  height: 100%;
+}
+
+.green {
+  background-color: #008751;
+}
+
+.white {
+  background-color: #fff;
 }
 
 .window {
@@ -28,7 +69,7 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* background: linear-gradient(to bottom right, #ff7e3f, #ffcc70); */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   background: linear-gradient(
     to bottom,
     #141313,
@@ -37,17 +78,17 @@ html {
     #a04e1e,
     #c56c22
   );
-  /* z-index: 2; */
   overflow: hidden;
 }
 
 .curtain {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   width: 30px;
+  border: 1px solid #444;
   background: linear-gradient(
     to bottom,
     #a62828 0%,
@@ -66,7 +107,7 @@ html {
   left: -350px;
   width: 450px;
   height: 800px;
-  border: 2px solid #b13434;
+  border: 1px solid white;
   transform: rotate(32deg);
   border-radius: 50% 40% 60% 30% / 60% 50% 70% 40%;
   background: linear-gradient(
@@ -79,7 +120,7 @@ html {
   );
   opacity: 1;
 
-  z-index: 2;
+  z-index: 3;
 }
 
 .curtain::after {
@@ -99,7 +140,6 @@ html {
     rgba(0, 0, 0, 0.9) 9px,
     rgba(0, 0, 0, 0) 8px,
     rgba(0, 0, 0, 0) 11px,
-
     rgba(0, 0, 0, 0) 20px,
     rgba(0, 0, 0, 0.9) 10px,
     rgba(0, 0, 0, 0) 0px,
@@ -112,16 +152,11 @@ html {
 .flag {
   position: absolute;
   top: 50%;
-  /* left: 50%; */
   width: 250px;
+  left: 50px;
   height: 120px;
-  /* transform: translate(-50%, -50%); */
-
-  border: 2px solid red;
   z-index: 1;
-  /*  */
   display: flex;
-
   animation: sway 5s infinite ease-in-out;
 }
 
@@ -165,5 +200,48 @@ html {
 
   50% {
     transform: rotate(3deg);
+  }
+}
+
+.text {
+  width: 90%;
+  margin: 30px auto 0;
+  text-align: center;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.pride-text {
+  font-size: 1.25rem;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+  animation: shineFromShadows 6s ease-in-out infinite;
+  background: linear-gradient(
+    to right,
+    #000000,
+    #444,
+    #f8b400,
+    #fff,
+    #f8b400,
+    #444,
+    #000000
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% auto;
+}
+
+@keyframes shineFromShadows {
+  0%,
+  100% {
+    background-position: 0% center;
+    opacity: 0.2;
+  }
+  50% {
+    background-position: 100% center;
+    opacity: 1;
   }
 }
