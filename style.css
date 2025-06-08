@@ -112,10 +112,58 @@ html {
 .flag {
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: 200px;
+  /* left: 50%; */
+  width: 250px;
   height: 120px;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
+
   border: 2px solid red;
   z-index: 1;
+  /*  */
+  display: flex;
+
+  animation: sway 5s infinite ease-in-out;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flag-unit {
+  width: 6px;
+  height: 6px;
+  animation: wave 1.5s infinite ease-in-out;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(
+      calc(var(--displacement) * -2px),
+      calc(var(--displacement) * -1px)
+    );
+  }
+
+  75% {
+    transform: translate(
+      calc(var(--displacement) * 2px),
+      calc(var(--displacement) * 2px)
+    );
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(3deg);
+  }
 }
