@@ -26,7 +26,7 @@ git clone https://github.com/Contractor-x/dev.to-challenge.git
 cd dev.to-challenge
 ```
 
-Alternatively, you can [download the ZIP](https://github.com/Contractor-x/dev.to-challenge/archive/refs/heads/main.zip) and extract it.
+Alternatively, you can [download the ZIP](https://github.com/daluclemas/dev.to-challenge/archive/refs/heads/main.zip) and extract it.
 
 ### 2. Open the Project in VS Code
 
@@ -69,9 +69,9 @@ This is a static project (HTML, CSS, JavaScript). You can open the main HTML fil
 
 ---
 
-## Contributing
+## To Contribute
 
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change and i will respond in a jiffy.
 
 ---
 
@@ -81,7 +81,7 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ---
 
-**Happy June Celebrations! 🎉**
-```
+**Built with 🎉 by daluclemas**
 
-Let me know if you need further customization!
+
+
